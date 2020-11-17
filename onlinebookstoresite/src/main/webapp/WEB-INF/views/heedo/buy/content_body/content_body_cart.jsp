@@ -25,11 +25,11 @@
 				<tr>
 					<th><input  style='zoom:1.5;' type="checkbox" id="allcheck" checked="checked"></th>
 					<th colspan="2" align="center">商品名</th>
-					<th>판매가</th>
-					<th>적립포인트</th>
-					<th>수량</th>
-					<th>합계</th>
-					<th style="text-align: right;">주문</th>
+					<th>販売価</th>
+					<th>積立ポイント</th>
+					<th>数量</th>
+					<th>合計</th>
+					<th style="text-align: right;">注文</th>
 				</tr>
 			</thead>
 			<tbody id="newtbody">
@@ -38,26 +38,26 @@
 			<tfoot>
 				<tr>
 					<td colspan="8" align="right">
-					상품 총 금액 : <strong><span id="total_value"></span></strong>원  
-					| 포인트 총 적립액 : <strong><span id="total_point"></span></strong>원</td>
+					商品総金額 : <strong><span id="total_value"></span></strong>ウォン   
+					| ポイント総積立額 : <strong><span id="total_point"></span></strong>ウォン </td>
 				</tr>
 			</tfoot>
 		</table>
 		<table class='table table-bordered' style='text-align:center;'>
 				<tr>
-					<th class='table-info' style='width:33.3%'>상품 총 금액</th>
-					<th class='table-info' style='width:33.3%'>배송비</th>
-					<th bgcolor='#80d4ff' style='width:33.3%'>최종 결제금액</th>
+					<th class='table-info' style='width:33.3%'>商品総金額</th>
+					<th class='table-info' style='width:33.3%'>配送料</th>
+					<th bgcolor='#80d4ff' style='width:33.3%'>最終決済金額</th>
 				</tr>
 				<tr>
-					<td><span id='new_total_value'></span>원</td>
-					<td><span id='new_total_shipfee'></span>원</td>
-					<td bgcolor='#80d4ff'><span id='final_payment_newvalue' style='color:#f51167;'></span><span style='#f51167'>원</span></td>
+					<td><span id='new_total_value'></span>ウォン </td>
+					<td><span id='new_total_shipfee'></span>ウォン </td>
+					<td bgcolor='#80d4ff'><span id='final_payment_newvalue' style='color:#f51167;'></span><span style='#f51167'>ウォン </span></td>
 				<tr>
 		</table>
 		<div id="newbottomBtn">
-			<button type='button' class='btn btn-primary btn-lg' id='odbtn'>주문하기</button>
-			<a href='${cp}/'><button type='button' class='btn btn-light btn-lg'>쇼핑계속하기</button></a>
+			<button type='button' class='btn btn-primary btn-lg' id='odbtn'>注文する</button>
+			<a href='${cp}/'><button type='button' class='btn btn-light btn-lg'>ショッピングを続ける</button></a>
 		</div>
 	</div>
 	
@@ -79,17 +79,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">  
-        <h5 class="modal-title" id="deleteModalLabel">상품 삭제</h5>
+        <h5 class="modal-title" id="deleteModalLabel">商品削除</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       장바구니에서 정말 삭제하시겠습니까?
+       カートから削除しますか?
       </div>
       <div class="modal-footer">
-      	<button type="button" class="btn btn-dark" id="deletebtn_modal">삭제하기</button>
-       	<button type="button" class="btn btn-light" data-dismiss="modal">취소하기</button>
+      	<button type="button" class="btn btn-dark" id="deletebtn_modal">削除する</button>
+       	<button type="button" class="btn btn-light" data-dismiss="modal">キャンセルする</button>
       </div>
     </div>
   </div>
@@ -103,14 +103,14 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header" style="background-color: #ff66a3">
-       <h4 class="modal-title" style="color:white">경고</h4>
+       <h4 class="modal-title" style="color:white">警告</h4>
         <button type="button" class="close" data-dismiss="modal">x</button>
       </div>
       <div class="modal-body">
-        	선택된 상품이 없습니다.
+        	選択した商品が存在しません。
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark" data-dismiss="modal">닫기</button>
+        <button type="button" class="btn btn-dark" data-dismiss="modal">閉じる</button>
       </div>
     </div>
 
