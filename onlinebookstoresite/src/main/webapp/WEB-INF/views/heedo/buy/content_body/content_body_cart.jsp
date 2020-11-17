@@ -24,7 +24,7 @@
 			<thead class="thead-dark">
 				<tr>
 					<th><input  style='zoom:1.5;' type="checkbox" id="allcheck" checked="checked"></th>
-					<th colspan="2" align="center">상품명</th>
+					<th colspan="2" align="center">商品名</th>
 					<th>판매가</th>
 					<th>적립포인트</th>
 					<th>수량</th>
