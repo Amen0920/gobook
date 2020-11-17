@@ -6,10 +6,10 @@
 		
 		<div class="date_picker shadow">
 			<ul class="list-group list-group-horizontal" id="dateUl">
-				<li class="list-group-item selectdate accountselect" onclick="changeDate(7,0)">최근 일주일</li>
-				<li class="list-group-item active selectdate accountselect" onclick="changeDate(0,1)">1개월</li>
-				<li class="list-group-item selectdate accountselect" onclick="changeDate(0,3)">3개월</li>
-				<li class="list-group-item selectdate accountselect" onclick="changeDate(0,6)">6개월</li>
+				<li class="list-group-item selectdate accountselect" onclick="changeDate(7,0)">最近一周</li>
+				<li class="list-group-item active selectdate accountselect" onclick="changeDate(0,1)">1ヶ月</li>
+				<li class="list-group-item selectdate accountselect" onclick="changeDate(0,3)">3ヶ月</li>
+				<li class="list-group-item selectdate accountselect" onclick="changeDate(0,6)">6ヶ月</li>
 			</ul>
 			<input type="text" id="date1" class="form-control" readonly="readonly">
 			<i class="far fa-calendar-alt fa-2x calenderIcon" id="startday"></i>
@@ -37,9 +37,9 @@
 			<div style="text-align: right" id="usedselectboxdiv">
 				
 					<select class="form-control" id="accountSelect">
-						<option value="all" selected="selected">전체</option>
-						<option value="apply">처리신청</option>
-						<option value="confirm">처리완료</option>
+						<option value="all" selected="selected">全体</option>
+						<option value="apply">申込中</option>
+						<option value="confirm">処理完了</option>
 					</select>
 				</div>
 			<table class="table" id="accountTable">
