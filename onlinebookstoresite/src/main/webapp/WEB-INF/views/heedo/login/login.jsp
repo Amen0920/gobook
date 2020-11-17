@@ -38,34 +38,34 @@
 							</div>
 							<ul class="nav nav-tabs">
 								<li class="nav-item"><a class="nav-link active"
-									data-toggle="tab" href="#home">회원</a></li>
+									data-toggle="tab" href="#home">会員</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab"
-									href="#menu1">비회원 주문확인</a></li>
+									href="#menu1">非会員 注文確認</a></li>
 							</ul>
 
 							<div class="tab-content">
 								<div id="home" class="tab-pane active">
 									<br>
-									<p class="login-card-description">로그인</p>
+									<p class="login-card-description">ログイン</p>
 									<form action="/loginOk" method="post">
 										<div class="form-group">
-											<label for="id" class="sr-only">아이디</label> <input
+											<label for="id" class="sr-only">ID</label> <input
 												type="text" name="id" id="id" class="form-control"
-												placeholder="아이디를 입력하세요">
+												placeholder="IDを入力してください">
 										</div>
 										<div class="form-group mb-4">
-											<label for="password" class="sr-only">비밀번호</label> <input
+											<label for="password" class="sr-only">暗証番号</label> <input
 												type="password" name="password" id="pwd"
 												class="form-control" placeholder="***********">
 										</div>
 										<input name="login" id="login"
 											class="btn btn-block login-btn mb-4" type="button"
-											value="로그인">
+											value="ログイン">
 									</form>
-									<a href="#!" class="forgot-password-link">비밀번호를 잊어버리셨습니까?</a>
+									<span class="forgot-password-link">新入会員募集中！</span>
 									<p class="login-card-footer-text">
-										아이디를 가지고 있지 않습니까? <a href="${cp }/join" class="text-reset">회원가입은
-											여기에서!</a>
+										IDを持っていませんか？ <a href="${cp }/join" class="text-reset">会員登録は
+											こちらで！</a>
 									</p>
 									<nav class="login-card-footer-nav">
 										<a href="#!">Terms of use.</a> <a href="#!">Privacy policy</a>
@@ -73,25 +73,25 @@
 								</div>
 								<div id="menu1" class="tab-pane fade">
 									<br>
-									<p class="login-card-description">주문조회</p>
+									<p class="login-card-description">注文確認</p>
 									<form action="#!">
 										<div class="form-group">
-											<label for="ordernum" class="sr-only">주문번호</label> <input
+											<label for="ordernum" class="sr-only">注文番号</label> <input
 												type="text" name="ordernum" id="ordernum" class="form-control"
-												placeholder="주문번호를 입력하세요">
+												placeholder="注文番号を入力してください。">
 										</div>
 										<div class="form-group mb-4">
-											<label for="phone" class="sr-only">전화번호</label> <input
+											<label for="phone" class="sr-only">電話番号</label> <input
 												type="text" name="phone" id="phone"
-												class="form-control" placeholder="전화번호를 입력하세요(-포함)">
+												class="form-control" placeholder="電話番号を入力してください。(-含め)">
 										</div>
 										<input name="login" id="search_order"
 											class="btn btn-block login-btn mb-4" type="button"
-											value="조회">
+											value="照会">
 									</form>
-									<a href="#!" class="forgot-password-link">주문번호를 잊어버리셨습니까?</a>
+									<span class="forgot-password-link">注文番号を忘れてしまいましたか?</span>
 									<p class="login-card-footer-text">
-										잊어버리셨다면  <a href="#!" class="text-reset"> 주문번호 찾기!</a>
+										忘れてしまいましたら  <span class="text-reset">連絡お願いいたします。</span>
 									</p>
 									<nav class="login-card-footer-nav">
 										<a href="#!">Terms of use.</a> <a href="#!">Privacy policy</a>
@@ -112,14 +112,14 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header" style="background-color: #ff66a3">
-       <h4 class="modal-title" style="color:white">에러</h4>
+       <h4 class="modal-title" style="color:white">エラー</h4>
         <button type="button" class="close" data-dismiss="modal">x</button>
       </div>
       <div class="modal-body" id="errmodal_body">
         	
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark" data-dismiss="modal">닫기</button>
+        <button type="button" class="btn btn-dark" data-dismiss="modal">閉じる</button>
       </div>
     </div>
 
@@ -132,14 +132,14 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header" style="background-color: #ccccff">
-       <h4 class="modal-title" style="color:white">알림</h4>
+       <h4 class="modal-title" style="color:white">お知らせ</h4>
         <button type="button" class="close" data-dismiss="modal">x</button>
       </div>
       <div class="modal-body" id="alertmodal_body">
         	
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark" data-dismiss="modal">닫기</button>
+        <button type="button" class="btn btn-dark" data-dismiss="modal">閉じる</button>
       </div>
     </div>
 
@@ -155,7 +155,7 @@
 		var id=$("#id").val();
 		var pwd=$("#pwd").val();
 		if(id=='' ||pwd==''){
-			$("#errmodal_body").text("아이디와 비밀번호를 적어주세요.");
+			$("#errmodal_body").text("IDと暗証番号を入力してください。");
 			$("#errmodal").modal('show')
 		}else{
 			$.ajax({
@@ -165,10 +165,10 @@
 				dataType:"json",
 				success:function(data){
 					if(data.result=="fail"){
-						$("#errmodal_body").text("입력하신 정보와 일치하는 회원이 없습니다. 아이디와 비밀번호를 확인해주세요.");
+						$("#errmodal_body").text("入力した情報と一致する会員が見つかりません. IDや暗証番号を確認してください。.");
 						$("#errmodal").modal('show')
 					}else if(data.result=="leave"){
-						$("#errmodal_body").text("탈퇴한 회원입니다.");
+						$("#errmodal_body").text("脱退会員です。");
 						$("#errmodal").modal('show')
 					}else{
 						window.location.href="/finalproject/";
@@ -183,12 +183,12 @@
 		var ordernum=$("#ordernum").val();
 		var phone=$("#phone").val();
 		if(ordernum=='' ||phone==''){
-			$("#errmodal_body").text("주문번호와 전화번호를 입력해주세요.");
+			$("#errmodal_body").text("注文番号と電話番号を入力してください。");
 			$("#errmodal").modal('show')
 			return;
 		}
 		if(!$.isNumeric(ordernum)){
-			$("#errmodal_body").text("주문번호는 숫자만 입력가능합니다.");
+			$("#errmodal_body").text("注文番号は数字だけ入力出来ます。");
 			$("#errmodal").modal('show')
 			return;
 		}
@@ -199,16 +199,16 @@
 			type:"post",
 			success:function(data){
 				if(data.result=="nothing"){
-					$("#alertmodal_body").text("존재하지 않는 주문입니다. 주문번호와 전화번호를 확인해주세요.")
+					$("#alertmodal_body").text("存在しない注文です. 注文番号や電話番号を確認してください。.")
 					$("#alertmodal").modal('show')
 				}else if(data.result=="applycancel"){
-					$("#alertmodal_body").text("반품/교환신청된 주문입니다")
+					$("#alertmodal_body").text("返品・交換申請中の注文です.")
 					$("#alertmodal").modal('show')
 				}else if(data.result=="confirmcancel"){
-					$("#alertmodal_body").text("반품/교환완료된 주문입니다")
+					$("#alertmodal_body").text("返品・交換完了の注文です.")
 					$("#alertmodal").modal('show')	
 				}else if(data.result=="cancelorder"){
-					$("#alertmodal_body").text("취소처리된 주문입니다.")
+					$("#alertmodal_body").text("キャンセルされた注文です.")
 					$("#alertmodal").modal('show')		
 				}else if(data.result=="success"){
 					var bpaynum1=data.bpaynum;

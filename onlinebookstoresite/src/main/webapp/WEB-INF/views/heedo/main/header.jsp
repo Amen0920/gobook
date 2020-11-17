@@ -29,10 +29,10 @@
 						<div class="up-item">
 							<i class="flaticon-profile"></i>
 							<c:if test="${ empty sessionScope.mid }">
-								<a href="${cp }/login">로그인</a> / <a href="${cp }/join">회원가입</a>
+								<a href="${cp }/login">ログイン</a> / <a href="${cp }/join">会員登録</a>
 							</c:if>
 							<c:if test="${not empty sessionScope.mid }">
-								<a href="${cp }/logout">로그아웃</a>
+								<a href="${cp }/logout">ログアウト</a>
 							</c:if>
 							
 						</div>
@@ -42,7 +42,7 @@
 								<span id="cartcount">
 								</span>
 							</div>
-							<a href="${cp }/pay/cart">장바구니</a>
+							<a href="${cp }/pay/cart">カート</a>
 						</div>
 					</div>
 				</div>
@@ -53,36 +53,36 @@
 		<div class="container">
 			<!-- menu -->
 			<ul class="main-menu">
-				<li><a href="${cp}/list1">카테고리</a>
+				<li><a href="${cp}/list1">カテゴリー</a>
 					<ul class="sub-menu">
-						<li><a href="${cp }/cnovel">소설</a></li>
-						<li><a href="${cp }/cpoetry">시/에세이</a></li>
-						<li><a href="${cp }/chuman">인문</a></li>
-						<li><a href="${cp }/ceconomy">경제/경영</a></li>
-						<li><a href="${cp }/cselfdev">자기계발</a></li>
-						<li><a href="${cp }/chistory">역사/문화</a></li>
-						<li><a href="${cp }/cjob">취업/수험서</a></li>
-						<li><a href="${cp }/ctravel">여행/지도</a></li>
-						<li><a href="${cp }/cit">컴퓨터/IT</a></li>
-						<li><a href="${cp }/ccartoon">만화</a></li>
-						<li><a href="${cp }/cguitar">기타</a></li>
+						<li><a href="${cp }/cnovel">小説</a></li>
+						<li><a href="${cp }/cpoetry">詩・エッセイ</a></li>
+						<li><a href="${cp }/chuman">人文</a></li>
+						<li><a href="${cp }/ceconomy">経済・経営</a></li>
+						<li><a href="${cp }/cselfdev">自己開発</a></li>
+						<li><a href="${cp }/chistory">歴史・文化</a></li>
+						<li><a href="${cp }/cjob">就職・受験書</a></li>
+						<li><a href="${cp }/ctravel">旅行・地図</a></li>
+						<li><a href="${cp }/cit">パソコン・IT</a></li>
+						<li><a href="${cp }/ccartoon">漫画</a></li>
+						<li><a href="${cp }/cguitar">ETC</a></li>
 					</ul></li>
-				<li><a href="${cp }/list2">베스트</a></li>
-				<li><a href="${cp }/newlist">신간 <span class="new">New</span>
+				<li><a href="${cp }/list2">ベスト</a></li>
+				<li><a href="${cp }/newlist">新刊 <span class="new">New</span>
 				</a></li>
-				<li><a href="${cp }/oldallbook">중고</a></li>
-				<li><a href="${cp }/mypage/main">마이페이지</a>
+				<li><a href="${cp }/oldallbook">中古</a></li>
+				<li><a href="${cp }/mypage/main">マイページ</a>
 					<ul class="sub-menu">
-						<li><a href="${cp }/mypage/orderhistory">주문내역</a></li>
-						<li><a href="#">반품/교환내역</a></li>
-						<li><a href="#">예치금내역</a></li>
-						<li><a href="#">계좌내역</a></li>
-						<li><a href="${cp }/seller">중고판매관리</a></li>
-						<li><a href="${cp }/mypage/qnapage">문의게시판</a></li>
+						<li><a href="${cp }/mypage/orderhistory">注文履歴</a></li>
+						<li><a href="#">返品・交換履歴</a></li>
+						<li><a href="#">預け金履歴</a></li>
+						<li><a href="#">口座履歴</a></li>
+						<li><a href="${cp }/seller">中古販売管理</a></li>
+						<li><a href="${cp }/mypage/qnapage">お問い合わせ掲示板</a></li>
 					</ul></li>
 					
 					<c:if test="${sessionScope.mid eq 'admin'}">
-						<li><a href="${cp }/adminmain">관리자 페이지</a></li>
+						<li><a href="${cp }/adminmain">管理者ページ、</a></li>
 					</c:if>
 			</ul>
 		</div>

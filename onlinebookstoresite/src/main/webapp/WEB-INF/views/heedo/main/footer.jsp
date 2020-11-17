@@ -9,7 +9,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2>About</h2>
-						<p>파이널 프로젝트 - 인터넷 서점</p>
+						<p>ファイナルプロジェクト - インターネット書店</p>
 						<!--  <img src="img/cards.png" alt="">-->
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
 								<div class="lp-content">
 									<h6>Final modification</h6>
-									<span>07/08, 2020</span>
+									<span>11/17, 2020</span>
 								</div>
 							</div>
 						</div>
@@ -59,7 +59,7 @@
 						<h2>INFOMATION</h2>
 						<div class="con-info">
 							<span>C.</span>
-							<p>중앙 HTA(주) </p>
+							<p>中央　HTA(株) </p>
 						</div>
 						<div class="con-info">
 							<span>B.</span>
@@ -71,7 +71,7 @@
 						</div>
 						<div class="con-info">
 							<span>E.</span>
-							<p>test@hta.com</p>
+							<p>luj0605@gmail.com</p>
 						</div>
 					</div>
 				</div>

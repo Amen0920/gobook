@@ -3,10 +3,10 @@
 <!-- /// 최상단 tab 영역 시작 /// -->
 <ul class="nav nav-tabs">
 	<li class="nav-item">
-		<a class="nav-link active" data-toggle="tab" href="#newitem">새상품</a>
+		<a class="nav-link active" data-toggle="tab" href="#newitem">新商品</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link " data-toggle="tab" href="#useditem">중고상품</a>
+		<a class="nav-link " data-toggle="tab" href="#useditem">中古品</a>
 	</li>
 </ul>    
 <!-- /// 최상단 tab 영역 끝 /// -->
@@ -15,10 +15,10 @@
 <div class="tab-content container shadow" id="content_cart">
 	<!-- /// 새상품 div 시작 /// -->
 	<div id="newitem" class="tab-pane active ">
-		<h4 style='display:inline'><span style='color:#f51167'>새상품</span> 장바구니</h4>
+		<h4 style='display:inline'><span style='color:#f51167'>新商品</span> カート</h4>
 		<div id="topButton" style="height:35px; float:right">
-			<span>선택한 상품  </span><button type='button' class='btn btn-outline-dark btn-sm odbtn' id='orderTopBtn'>주문하기</button>
-			<button type='button' class='btn btn-outline-secondary btn-sm' id='deleteTopBtn'>삭제하기</button>
+			<span>選択商品  </span><button type='button' class='btn btn-outline-dark btn-sm odbtn' id='orderTopBtn'>注文する</button>
+			<button type='button' class='btn btn-outline-secondary btn-sm' id='deleteTopBtn'>削除する</button>
 		</div>
 		<table class="table">
 			<thead class="thead-dark">
@@ -27,7 +27,7 @@
 					<th colspan="2" align="center">상품명</th>
 					<th>판매가</th>
 					<th>적립포인트</th>
-					<th>수랑</th>
+					<th>수량</th>
 					<th>합계</th>
 					<th style="text-align: right;">주문</th>
 				</tr>
