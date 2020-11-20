@@ -136,44 +136,44 @@
 				// 장바구니에 데이터 없을경우.
 				if(data.length==0){
 					var c=$("<div class='container tableDiv'></div>").appendTo("#useditem");
-					var htitle="<h4 style='display:inline'><span style='color:#f51167'>중고 판매자별</span> 장바구니  : 없음 </h4>"
+					var htitle="<h4 style='display:inline'><span style='color:#f51167'>中古販売者別</span> カート  : 無し </h4>"
 					c.append(htitle);
 					var tableapp=
 							"<table class='table'>"
 								+"<thead class='thead-dark'>"
 									+"<tr>"
-										+"<th colspan='2' align='center'>상품명</th>"
-										+"<th>정가</th>"
-										+"<th>판매가</th>"
-										+"<th>수랑</th>"
-										+"<th>합계</th>"
-										+"<th>주문</th>"
+										+"<th colspan='2' align='center'>商品名</th>"
+										+"<th>定価</th>"
+										+"<th>販売価</th>"
+										+"<th>数量</th>"
+										+"<th>合計</th>"
+										+"<th>注文</th>"
 										+"<th><input  style='zoom:1.5;' type='checkbox' checked='checked'></th>"
 									+"</tr>"
 								+"</thead>"
 								+"<tr>"
-								+"<td colspan='8' align='center'><strong><span>장바구니에 담긴 상품이 없습니다.</span></strong></td>"
+								+"<td colspan='8' align='center'><strong><span>カートに商品が存在しません。</span></strong></td>"
 								+"</tr></table>";
 					 c.append(tableapp);
 					 var c=$("<div class='container tableDiv'></div>").appendTo("#useditem");
-						var htitle="<h5 style='display:inline'><span style='color:#f51167'>결제</span>정보</h5>"
+						var htitle="<h5 style='display:inline'><span style='color:#f51167'>決済</span>情報</h5>"
 						c.append(htitle);
 						var chargeApp="<table class='table table-bordered' style='text-align:center;'>"
 										 +"<tr>"
-										 	+"<th class='table-info' style='width:33.3%'>총 상품 총 금액</th>"
-										 	+"<th class='table-info' style='width:33.3%'>총 배송비</th>"
-										 	+"<th bgcolor='#80d4ff' style='width:33.3%'>최종 결제금액</th>"
+										 	+"<th class='table-info' style='width:33.3%'>総商品金額</th>"
+										 	+"<th class='table-info' style='width:33.3%'>総配送料</th>"
+										 	+"<th bgcolor='#80d4ff' style='width:33.3%'>最終決済金額</th>"
 										 +"</tr>"
 										 +"<tr>"
-										 	+"<td><span id='all_total_value'>0</span>원</td>"
-										 	+"<td><span id='all_total_shipfee'>0</span>원</td>"
-										 	+"<td bgcolor='#80d4ff'><span id='final_payment_value' style='color:#f51167;'>0</span><span style='#f51167'>원</span></td>"
+										 	+"<td><span id='all_total_value'>0</span>ウォン</td>"
+										 	+"<td><span id='all_total_shipfee'>0</span>ウォン</td>"
+										 	+"<td bgcolor='#80d4ff'><span id='final_payment_value' style='color:#f51167;'>0</span><span style='#f51167'>ウォン</span></td>"
 										 +"<tr>"
 										+"</table>";
 						c.append(chargeApp); 
 						// 하단 결제정보 테이블 끝 //	
 						var bottomBtnGroup="<div style='text-align:center;''>"
-							  	+"<a href='${cp}/'><button type='button' class='btn btn-light btn-lg'>쇼핑계속하기</button></a>"
+							  	+"<a href='${cp}/'><button type='button' class='btn btn-light btn-lg'>ショッピングを続ける</button></a>"
 							  	+"</div>"
 						c.append(bottomBtnGroup);
 					 return;
@@ -183,23 +183,23 @@
 				// 각 중고판매자 테이블부터 생성. 
 				for(var i=0;i<sidlist.length;i++){
 					var c=$("<div class='container tableDiv'></div>").appendTo("#useditem");
-					var htitle="<h4 style='display:inline'><span style='color:#f51167'>중고판매자별</span> 장바구니  : "+ sidlist[i]+"</h4>"
+					var htitle="<h4 style='display:inline'><span style='color:#f51167'>中古販売者別</span> カート  : "+ sidlist[i]+"</h4>"
 					c.append(htitle);
 					var topbutton="<div id='topButton' style='height:35px;display:inline-block;float:right'>"
-								 +"<span>해당 판매자 선택한 상품  </span><button type='button' class='btn btn-outline-dark btn-sm usedorderTopBtn' data-sid="+sidlist[i]+">주문하기</button>"
-								 +"<button type='button' class='btn btn-outline-secondary btn-sm' id='deleteTopBtn'>삭제하기</button>";
+								 +"<span>選択した商品  </span><button type='button' class='btn btn-outline-dark btn-sm usedorderTopBtn' data-sid="+sidlist[i]+">注文する</button>"
+								 +"<button type='button' class='btn btn-outline-secondary btn-sm' id='deleteTopBtn'>削除する</button>";
 								 +"</div><br>";	
 					c.append(topbutton);
 				    var tableapp=
 						"<table class='table'>"
 							+"<thead class='thead-dark'>"
 								+"<tr>"
-									+"<th colspan='2' align='center'>상품명</th>"
-									+"<th>정가</th>"
-									+"<th>판매가</th>"
-									+"<th>수랑</th>"
-									+"<th>합계</th>"
-									+"<th>주문</th>"
+									+"<th colspan='2' align='center'>商品名</th>"
+									+"<th>定価</th>"
+									+"<th>販売価</th>"
+									+"<th>数量</th>"
+									+"<th>合計</th>"
+									+"<th>注文</th>"
 									+"<th><input class='usedTopCheckbox' style='zoom:1.5;' type='checkbox' checked='checked' data-sid="+sidlist[i]+"></th>"
 								+"</tr>"
 							+"</thead>"
@@ -208,8 +208,8 @@
 							+"<tfoot>"
 								+"<tr>"
 									+"<td colspan='8' align='right'>"
-									+"상품 총 금액 : <strong><span id='"+sidlist[i]+"_total_value' class='used_total_value'>0</span></strong>원"
-									+"( + 배송비 <strong><span id='"+sidlist[i]+"_total_shipfee' class='used_total_shipfee'>0</span></strong>원)"
+									+"商品総金額 : <strong><span id='"+sidlist[i]+"_total_value' class='used_total_value'>0</span></strong>ウォン"
+									+"( + 配送料 <strong><span id='"+sidlist[i]+"_total_shipfee' class='used_total_shipfee'>0</span></strong>ウォン)"
 								+"</tr>"
 							+"</tfoot>"
 						+"</table>";
